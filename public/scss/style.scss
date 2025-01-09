@@ -1,0 +1,65 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Global styles
+body {
+  font-family: $font-stack;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+
+// Header styles
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline;
+        margin: 0 1rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Main content styles
+main {
+  padding: 2rem;
+
+  h1 {
+    color: $primary-color;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+// Footer styles
+footer {
+  background-color: $secondary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

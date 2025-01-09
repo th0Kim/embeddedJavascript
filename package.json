@@ -5,5 +5,8 @@
   },
   "devDependencies": {
     "sass": "^1.83.1"
+  },
+  "scripts": {
+    "scss": "sass --watch public/scss:public/css"
   }
 }
