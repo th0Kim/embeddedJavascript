@@ -1,13 +1,16 @@
 {
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "node-sass-middleware": "^1.1.0"
+    "express": "^4.21.2"
   },
   "devDependencies": {
-    "sass": "^1.83.1"
+    "sass": "^1.83.1",
+    "livereload": "^0.9.3",
+    "connect-livereload": "^0.6.1",
+    "concurrently": "^9.1.2"
   },
   "scripts": {
-    "scss": "sass --watch public/scss:public/css"
+    "scss": "sass --watch public/scss:public/css",
+    "start": "concurrently \"npm run scss\" \"node server.js\""
   }
 }

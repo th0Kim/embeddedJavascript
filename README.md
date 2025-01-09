@@ -6,18 +6,22 @@
 
 ---
 
-#### server.js start
+#### scss,ejs 파일 감시 : server.js 실행
 
-> node server.js
+> npm start
 
 ---
 
 #### 구조
 
-views(html)
+public
 
-- /components
-- /src
+- css
+- scss
+
+views
+
+- components/\*\*.ejs
 - index.ejs
 
 ---
