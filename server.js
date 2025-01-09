@@ -1,6 +1,10 @@
 // server.js
 const express = require("express");
 const app = express();
+const path = require("path");
+
+// 정적 파일 제공
+app.use(express.static(path.join(__dirname, "/public")));
 
 // EJS 설정
 app.set("view engine", "ejs");
