@@ -6,6 +6,10 @@ const chokidar = require("chokidar");
 
 const app = express();
 
+// 라우트 설정
+const indexRoutes = require("./routes/index");
+const pageRoutes = require("./routes/pages");
+
 // LiveReload 설정
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch([
@@ -25,12 +29,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // 정적 파일 제공
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname)));
 
-// 라우팅
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// 라우트 등록
+app.use("/", indexRoutes); // 메인 라우트
+app.use("/", pageRoutes); // 페이지 라우트
 
 // 서버 실행
 const PORT = process.env.PORT || 5010;
